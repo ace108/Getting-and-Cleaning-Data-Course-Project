@@ -73,16 +73,16 @@ run_analysis <- function() {
     #>> Write tidy data to 2 output file in d:/R data folder
     write.table(all_means, 
                 file = "d:/R data/tidy_data_csv.txt",   # Comma separated values file
-                row.name=FALSE,sep=",")
+                row.name=FALSE, sep=",")
     write.table(all_means, 
-                file = "d:/R data/tidy_data.txt",       # no separator file
-                row.name=FALSE)
+                file = "d:/R data/tidy_data_tsv.txt",       # tab separated values file
+                row.name=FALSE, sep="\t")
     
     #####
     all_mean_column_names <- names (all_means)
     write.table(all_mean_column_names, 
-                file = "d:/R data/tidy_data_column_names_csv.txt",   # Comma separated values file
-                row.name=FALSE, col.names=FALSE, sep=",")
+                file = "d:/R data/tidy_data_column_names.txt",   
+                row.name=FALSE, col.names=FALSE)
     
     
 ##############################################################################
