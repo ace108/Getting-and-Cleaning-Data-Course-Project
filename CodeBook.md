@@ -1,4 +1,5 @@
 # Data source
+The source data represent data collected from the accelerometers from the Samsung S smartphone. 
 A full description is available at the site where the data was obtained:<BR>
     http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones <BR>
 The zip file containing data is downloaded from: <BR>
