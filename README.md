@@ -13,7 +13,7 @@ Download the zip file to D:\R Data
 Unzip the downloaded file "getdata_projectfiles_UCI HAR Dataset.zip"
 A folder "D:\R Data\UCI HAR Dataset" will be created and contains the data and description of the data files.
 
-run_analysis.R is a script created with a function run_analysis to process and clean the data and produce two output files.
+run_analysis.R is a script created with a function run_analysis to process and clean the data to produce the tiday data.
 The run_analysis.R script is created in the D:\R Programming folder.
 For details of how the script process the source data, refer to the Code Book in this repo. 
 
@@ -21,7 +21,7 @@ Commands for running the script in R or R studio are:
 > source("d:/R Programming/run_analysis.R") <BR>
 > run_analysis() <BR>
 
-After running the run_analysis function, the following output files will be created in the D:\R Data folder: <BR>
+After running the run_analysis function, the tidy data will be output to two output files in the D:\R Data folder: <BR>
 1. tidy_data_csv.txt  - this file contains the tidy data separated by "," (comma) <BR>
 2. tidy_data.txt      - this file contains the tidy data without separator<BR>
 
