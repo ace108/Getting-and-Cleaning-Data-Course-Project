@@ -1,13 +1,13 @@
 # Getting-and-Cleaning-Data-Course-Project
 Getting and Cleaning Data Course Project
 
-    ## OBJECTIVE: to prepare tidy data that can be used for later analysis.  
-    ## 1) a tidy data set as described below, 
-    ## 2) a link to a Github repository with script for performing the analysis, 
-    ## 3) a code book that describes the variables, the data, and any transformations or 
-    ##    work that you performed to clean up the data called CodeBook.md. 
-    ##    You should also include a README.md in the repo with your scripts. 
-    ##    This repo explains how all of the scripts work and how they are connected.  
+## OBJECTIVE: to prepare tidy data that can be used for later analysis.  
+## 1) a tidy data set as described below, 
+## 2) a link to a Github repository with script for performing the analysis, 
+## 3) a code book that describes the variables, the data, and any transformations or 
+##    work that you performed to clean up the data called CodeBook.md. 
+##    You should also include a README.md in the repo with your scripts. 
+##    This repo explains how all of the scripts work and how they are connected.  
 
     ## The data represent data collected from the accelerometers from the Samsung Galaxy S smartphone. 
     ## A full description is available at the site where the data was obtained: 
@@ -56,39 +56,15 @@ Getting and Cleaning Data Course Project
     names(y_test)<-'activity'
     
     #>> Getting SUBJECT data
-    subject_train <- read.table("train/Subject_train.txt")
-    names(subject_train) <- "subject"
-    
-    subject_test <- read.table("test/Subject_test.txt")
-    names(subject_test) <- "subject"
-    
-#    y_test$activity <- as.factor(y_test$activity)
-#    y_train$activity <- as.factor(y_train$activity)
-#    subject_test$subject <- as.factor(subject_test$subject)
-#    subject_train$subject <- as.factor(subject_train$subject)
-    
+
     x_y_subject_train <- cbind(x_train,y_train,subject_train)
     x_y_subject_test <- cbind(x_test,y_test,subject_test)
     x_y_subject_both<-rbind(x_y_subject_train,x_y_subject_test)
-#    x_y_subject_both$subject<-as.numeric(x_y_subject_both$subject)  
-#    x_y_subject_both <- arrange(x_y_subject_both,subject,activity)
-#    write.table(x_y_subject_both, file = "../x_y_subject_both.csv",row.name=FALSE,sep=",")
 
     all_means<-aggregate(x_y_subject_both[,1:(no_of_xcolumns)], list
                          (subject=x_y_subject_both$subject,activity=x_y_subject_both$activity),mean )
-#    all_means$subject<-as.numeric(all_means$subject)    
     all_means<-arrange(all_means,subject,activity)
     write.table(all_means, file = "../tidy_data.txt",row.name=FALSE)
     write.table(all_means, file = "../tidy_data_csv.txt",row.name=FALSE,sep=",")
     
 
-############
-running <- c(
-'
-source("d:/R Programming/run_analysis.R")
-',
-'
-run_analysis()
-')
-}
-    
