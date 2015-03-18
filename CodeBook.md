@@ -5,17 +5,13 @@ A full description is available at the site where the data was obtained:<BR>
 The zip file containing data is downloaded from: <BR>
     https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip <BR>
 
-## STEPS
+# Transformation
+
 Download the zip file to D:\R Data
 Unzip the downloaded file "getdata_projectfiles_UCI HAR Dataset.zip"
 A folder "D:\R Data\UCI HAR Dataset" will be created and contains the data and description of the data files.
 
-run_analysis.R is a script created in the D:\R Programming folder.  In th script, the function run_analysis is to be run to process and clean the data to produce the tidy data with the following commands in R or R studio: <BR>
-Commands for running the script in R or R studio are:
-> source("d:/R Programming/run_analysis.R") <BR>
-> run_analysis() <BR>
-
-run_analysis function will do the following:<BR>
+run_analysis.R is a script created in the D:\R Programming folder.  In th script, the function run_analysis will process and clean the data to produce the tidy data as follow:<BR>
 1. Get X data into variables <BOLD>x_train</BOLD> and <BOLD>x_test</BOLD> <BR>
 2. Name columns for X data variables <BR>
 3. Subset X data for only mean and std columns
@@ -33,4 +29,15 @@ B. tidy_data.txt"     - File without separator containing the tidy data <BR>
 13. Write variable all_mean_column_names to "d:/R data/tidy_data_column_names_csv.txt"
 14. The data of file created in step 13 can be included in the Code Book.
     
+Commands for running the run_analysis function  in R or R studio are:
+> source("d:/R Programming/run_analysis.R") <BR>
+> run_analysis() <BR>
+
+# Output
+On completion of run_analysis function, there will 3 output files in the D:\R Data folder: 
+ 1. tidy_data_csv.txt - this file contains the tidy data separated by "," (comma) 
+ 2. tidy_data_tsv.txt - this file contains the tidy data separated by TAB 
+ 3. tidy_data_column_names.txt - this file contains the column names of the tidy data set which can be used for inclusion into the Code Book 
+ 
+
 
