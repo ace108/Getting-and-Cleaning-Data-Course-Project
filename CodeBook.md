@@ -27,7 +27,7 @@ run_analysis.R is a script created in the D:\R Programming folder.  In th script
 10. Determine mean for X data for each subject and each activity to generate tidy data set in variable all_means  <BR>
 11. Write tidy data to 2 output file in d:/R data folder <BR>
 A. tidy_data_csv.txt" - Comma separated values file containing the tidy data <BR>
-B. tidy_data.txt"     - File without separator containing the tidy data <BR>
+B. tidy_data_tsv.txt"   Tab separated values file containing the tidy data <BR>
 12. Save column names of the variable all_means in variable all_mean_column_names <BR>
 13. Write variable all_mean_column_names to "d:/R data/tidy_data_column_names_csv.txt"  <BR>
 14. The data of file created in step 13 can be included in the Code Book.  <BR>
