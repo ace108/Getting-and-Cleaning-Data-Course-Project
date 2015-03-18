@@ -22,6 +22,6 @@ Commands for running the script in R or R studio are:
 > run_analysis() <BR>
 
 After running the run_analysis function, the following output files will be created in the D:\R Data folder:
-1. tidy_data_csv.txt  - this file contains the tidy data separated by "," (comma)
-2. tidy_data.txt      - this file contains the tidy 
+1. tidy_data_csv.txt  - this file contains the tidy data separated by "," (comma) <BR>
+2. tidy_data.txt      - this file contains the tidy <BR>
 
