@@ -5,34 +5,32 @@ A full description is available at the site where the data was obtained:<BR>
 The zip file containing data is downloaded from: <BR>
     https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip <BR>
 
-
-
 ## STEPS
-
 Download the zip file to D:\R Data
 Unzip the downloaded file "getdata_projectfiles_UCI HAR Dataset.zip"
 A folder "D:\R Data\UCI HAR Dataset" will be created and contains the data and description of the data files.
-run_analysis.R is a script created with a function run_analysis to process and clean the data to produce the tiday data.
-The run_analysis.R script is created in the D:\R Programming folder.
-For details of how the script process the source data, refer to the Code Book in this repo. 
 
+run_analysis.R is a script created in the D:\R Programming folder.  In th script, the function run_analysis is to be run to process and clean the data to produce the tidy data with the following commands in R or R studio: <BR>
 Commands for running the script in R or R studio are:
 > source("d:/R Programming/run_analysis.R") <BR>
 > run_analysis() <BR>
 
-After running the run_analysis function, the tidy data will be output to two output files in the D:\R Data folder: <BR>
-1. tidy_data_csv.txt  - this file contains the tidy data separated by "," (comma) <BR>
-2. tidy_data.txt      - this file contains the tidy data without separator<BR>
-
-describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. 
-
-## 3) a code book that describes the variables, the data, and any transformations or 
-##    work that you performed to clean up the data called CodeBook.md. description of the data files.
-
-##    You should also include a README.md in the repo with your scripts. 
-##    This repo explains how all of the scripts work and how they are connected.  
-
-
-
-
+run_analysis function will do the following:<BR>
+1. Get X data into variables x_train and x_test
+2. Name columns for X data variables
+3. Subset X data for only mean and std columns
+4. Get Y data into variables y_train and y_test
+5. Give Y data descriptive meaning
+6. Name column for Y data variable
+7. Get SUBJECT data into variables subject_train and subject_test
+8. Name column for subject data variable
+9. Merge X, Y and Subject train and test data into one (column names will be inherited)
+10. Determine mean for X data for each subject and each activity to generate tidy data set in variable all_means 
+11. Write tidy data to 2 output file in d:/R data folder <BR>
+A. tidy_data_csv.txt" - Comma separated values file containing the tidy data <BR>
+B. tidy_data.txt"     - File without separator containing the tidy data <BR>
+12. Save column names of the variable all_means in variable all_mean_column_names 
+13. Write variable all_mean_column_names to "d:/R data/tidy_data_column_names_csv.txt"
+14. The data of file created in step 13 can be included in the Code Book.
+    
 
