@@ -9,6 +9,7 @@ A full description is available at the site where the data was obtained:
 The zip file containing data is downloaded from: 
     https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
+## SOLUTIOIN
 Download the zip file to D:\R Data
 Unzip the downloaded file "getdata_projectfiles_UCI HAR Dataset.zip"
 A folder "D:\R Data\UCI HAR Dataset" will be created and contains the data and description of the data files.
