@@ -16,7 +16,7 @@ Commands for running the script in R or R studio are:
 > run_analysis() <BR>
 
 run_analysis function will do the following:<BR>
-1. Get X data into variables x_train and x_test
+1. Get X data into variables <BOLD>x_train</BOLD> and <BOLD>x_test</BOLD>
 2. Name columns for X data variables
 3. Subset X data for only mean and std columns
 4. Get Y data into variables y_train and y_test
